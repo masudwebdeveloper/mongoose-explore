@@ -1,9 +1,9 @@
-const mongoose = require("mongoose");
+import mongoose from 'mongoose';
 import app from './app';
 
 const port = 5000;
 
-async function main() {
+async function run() {
   try {
     await mongoose.connect("mongodb://127.0.0.1:27017/practicedb");
     console.log("Mongodb Connect");
@@ -14,5 +14,5 @@ async function main() {
     console.log(error);
   }
 }
-main().catch((err) => console.log(err));
+run().catch((err) => console.error(err));
 
