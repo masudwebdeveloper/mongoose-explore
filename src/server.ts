@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import app from './app';
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 async function run() {
   try {
